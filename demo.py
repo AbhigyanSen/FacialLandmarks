@@ -31,15 +31,13 @@ faceLandmarkDetector = dlib.shape_predictor(Model_PATH)
 
 # ---------------------------------------------
 
-import os
-
 def store_FileName(FilePath):
     filename_with_extension = os.path.basename(FilePath)
     FileName, _ = os.path.splitext(filename_with_extension)
     return FileName
 
 # We now reading image on which we applied our face detector
-FilePath = "Images\Input\DemoImage.png"  # Change this to your file path
+FilePath = "Images\Input\DemoImage1.png"  # Change this to your file path
 FileName = store_FileName(FilePath)
 print("Filename without extension:", FileName)
 
