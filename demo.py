@@ -3,7 +3,7 @@
 import dlib
 import cv2
 import numpy as np
-# from facePoints import facePoints
+from facePoints import facePoints
 
 def writeFaceLandmarksToLocalFile(faceLandmarks, fileName):
   with open(fileName, 'w') as f:
@@ -62,7 +62,7 @@ for k in range(0, len(allFaces)):
   allFacesLandmark.append(detectedLandmarks)
 
   # Now finally we drawing landmarks on face
-#   facePoints(img, detectedLandmarks)
+  facePoints(img, detectedLandmarks)
 
   fileName = faceLandmarksOuput +"_"+ str(k)+ ".txt"
   print("Lanmdark is save into ", fileName)
